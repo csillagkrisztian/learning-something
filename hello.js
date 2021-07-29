@@ -1,1 +1,1 @@
-console.log('szia!');
+console.log('szia uram!');
