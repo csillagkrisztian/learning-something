@@ -5,3 +5,4 @@ cd {hova / ..(vissza)} - ugralas a forlderba
 ### Git Commands
 git status - megnezni a pillanatnyi git helyzetet
 git add . - minden valtozast adj oda a gitnek
+git commit -m "{szoveg}" - a valtozasok megneveze
