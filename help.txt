@@ -1,4 +1,4 @@
-### Command Prompt Shortcuts
+ ,### Command Prompt Shortcuts
 mkdir {folder neve} - uj folder
 cd {hova / ..(vissza)} - ugralas a forlderba
 
@@ -7,4 +7,4 @@ git status - megnezni a pillanatnyi git helyzetet
 git add . - minden valtozast adj oda a gitnek
 git commit -m "{szoveg}" - a valtozasok megneveze
 git push {hova} - felkuldese a netre az infonak
-git pull - frissiti a feltoltott informaciokat 
+git pull - frissiti a feltoltott informaciokat (enis megcsinaltam,Bogyo)
