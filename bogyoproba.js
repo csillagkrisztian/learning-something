@@ -2,5 +2,5 @@
 var bogyo;
 bogyo = 420;
 var hmm = 69;
-var a = "meg foglak" ;
-a = a + "baszni:)" ;
+var a = "meg foglak";
+a = a + "baszni:)";
