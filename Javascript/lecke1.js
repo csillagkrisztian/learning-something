@@ -76,5 +76,23 @@ const semmien = undefined;
 // legyen egy lista amibe van ket ember, az embernek legyen neve, kora, magassaga, sulya, id
 
 let feladatLista = [];
-const ember1 = {};
-const ember2 = {};
+const ember1 = {
+    nev: 'Bence',
+    kor: 25,
+    magasssag: 175 + 'cm',
+    sulya: 99 + 'kg',
+    id: 1,
+};
+
+
+const ember2 = {
+    nev: 'Gyuri',
+    kor: 30,
+    magasssag: 199 + 'cm',
+    sulya: 142 + 'kg',
+    id: 2,
+};
+
+feladatLista = [ember1,ember2]
+
+console.log(feladatLista);
