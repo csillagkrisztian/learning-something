@@ -111,7 +111,7 @@ const korhazRossz = {
                     id: 1,
                 },
                 {
-                    neve:'Cicok'
+                    neve:'Cicok',
                     kor: 25,
                     magasssag: 175 + 'cm',
                     sulya: 99 + 'kg',
@@ -122,4 +122,7 @@ const korhazRossz = {
     ]
 }
 
-console.log(feladatLista);
+console.log(korhazRossz);
+
+// Ebbol minel kompaktabb korházat
+// consol logloni mind a 4 paciens nevet es korat, ugy hogy a korhazbol indulunk
