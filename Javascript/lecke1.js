@@ -104,7 +104,7 @@ const korhazRossz = {
             nev:'peti',
             paciensek: [
                 {
-                    neve:'Mari',
+                    neve:Mari,
                     kor: 25,
                     magasssag: 175 + 'cm',
                     sulya: 99 + 'kg',
@@ -122,7 +122,12 @@ const korhazRossz = {
     ]
 }
 
+<<<<<<< HEAD
 console.log(korhazRossz);
 
 // Ebbol minel kompaktabb korházat
 // consol logloni mind a 4 paciens nevet es korat, ugy hogy a korhazbol indulunk
+=======
+// Ebbol minnel kompaktabb korhazat csinalni
+// Console.loggolni mind a negy paciens nevet es korat, ugy hogy a korhazbol indulunk ki
+>>>>>>> 1480884da7fbce0202087f851daa2f2e5c468648
