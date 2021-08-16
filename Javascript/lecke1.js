@@ -122,11 +122,11 @@ const korhazRossz = {
     ]
 };
 
-<<<<<<< HEAD
 console.log(korhazRossz);
 
 // Ebbol minel kompaktabb korházat
 // consol logloni mind a 4 paciens nevet es korat, ugy hogy a korhazbol indulunk
+<<<<<<< HEAD
 =======
 // Ebbol minnel kompaktabb korhazat csinalni
 // Console.loggolni mind a negy paciens nevet es korat, ugy hogy a korhazbol indulunk ki
@@ -135,3 +135,5 @@ console.log(korhazRossz);
 =======
 >>>>>>> 1480884da7fbce0202087f851daa2f2e5c468648
 >>>>>>> 8be51973d1f666a6c112fd4c8bcbdea8f1c6e0a4
+=======
+>>>>>>> 0dd953530f10f123d33b6cb7586f2322b835bfd0
