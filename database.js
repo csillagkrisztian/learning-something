@@ -45,5 +45,12 @@ const korhazBajmok = {
     doktorok:[doktor1, doktor2]
 }
 
+//milyen nehez vagy?[   / kg/lbs/]
+const kg = 'kg';
+const lbs = 'lbs';
+let felhasznaloBevitle = 150;
+let kivalasztottMertekegyseg = kg;
+
+
 //m
 module.exports = korhazBajmok;

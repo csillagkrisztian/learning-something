@@ -61,6 +61,8 @@ const objektum = {
     dogName: 'Boby',
 };
 
+
+
 // null vs. undefined
 
 const semmi = null;
