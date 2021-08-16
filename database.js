@@ -32,21 +32,18 @@ const paciens4 = {
 
 const doktor1 = {
     nev: "Bertalan",
-    paciens1,
-    paciens2,
+    paciensek: [paciens1,paciens2]
 }
 
 const doktor2 = {
     nev: "Jozsef",
-    paciens3,
-    paciens4,
+    paciensek: [paciens3,paciens4]
 }
 
 const korhazBajmok = {
     nev: "St' Bajmok", 
-    doktor1, 
-    doktor2,
+    doktorok:[doktor1, doktor2]
 }
 
-
-console.log(korhazBajmok.doktor1.paciens2.kor)
+//m
+module.exports = korhazBajmok;
