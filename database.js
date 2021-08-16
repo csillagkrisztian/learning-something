@@ -1,3 +1,4 @@
+
 const paciens1 = {
     nev: "Csilla",
     kor: 25,
