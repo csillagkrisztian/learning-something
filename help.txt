@@ -8,8 +8,3 @@ git add . - minden valtozast adj oda a gitnek
 git commit -m "{szoveg}" - a valtozasok megneveze
 git push {hova} - felkuldese a netre az infonak
 git pull - frissiti a feltoltott informaciokat (enis megcsinaltam,Bogyo)
-
-### Export Import 
-./ - ugyan az a folder
-../ - egyel vissza
-module.exports = 'adat'; - igy exportalsz
