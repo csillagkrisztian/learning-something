@@ -1,4 +1,4 @@
-const adat = 'adat';
-const lofasz = 'lofasz';
+const adat = "adat";
+const lofasz = "lofasz";
 
-module.exports = {adat, lofasz};
+module.exports = { adat, lofasz };

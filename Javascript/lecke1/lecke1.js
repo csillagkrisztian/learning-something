@@ -1,29 +1,29 @@
 //nem jo
 
-var lofasz = 'valami'; 
+var lofasz = "valami";
 
 // definialas
 // 1
-// var : variable 
-// let : valtoztathato variable 
+// var : variable
+// let : valtoztathato variable
 // const : nem megvaltoztathato variable
-// 2 
+// 2
 // lofasz : nev
-// 3 
+// 3
 // = : initialization/assignment
-// 4 
+// 4
 // 'valami' : adat
 
 //jo
 
-let lofasz1 = 'valami';
-const lofasz2 = 'valami'; // 99%
+let lofasz1 = "valami";
+const lofasz2 = "valami"; // 99%
 
 // kivetel
 const youre = "you\"'re";
 const temp = `you're""`;
 
-// pelda 
+// pelda
 
 let osszeg;
 const egy = 1;
@@ -40,28 +40,24 @@ null = semmi - null
 undefined = nem definialt - undefined
 */
 
-// lista 
-// ha el akarod erni egy bizonyos lista adatat 
+// lista
+// ha el akarod erni egy bizonyos lista adatat
 // lista[0]
 // az index szamok mindig nullatol indulnak
 
-const lista = [
-    'cigi', 'sor', 'ja nem', 'cevap'
-];
+const lista = ["cigi", "sor", "ja nem", "cevap"];
 
 //console.log(lista[negy-egy]);
 
-// objektum 
+// objektum
 // id : kulcs/key
 // '1' : ertek/value
 
 const objektum = {
-    id:'1',
-    name:'Kiki',
-    dogName: 'Boby',
+  id: "1",
+  name: "Kiki",
+  dogName: "Boby",
 };
-
-
 
 // null vs. undefined
 
@@ -74,68 +70,55 @@ const semmien = undefined;
 //console.log('### Itt az objektum', objektum['id'], objektum.name)
 //console.log(Object.values(objektum))
 
-
 // legyen egy lista amibe van ket ember, az embernek legyen neve, kora, magassaga, sulya, id
-
 
 // gusztus
 
 const korhazRossz = {
-    neve:'szarhaz',
-    doktorok:[
+  neve: "szarhaz",
+  doktorok: [
+    {
+      nev: "guszi",
+      paciensek: [
         {
-            nev:'guszi',
-            paciensek:[
-                {
-                    neve:'Bence',
-                    kor: 25,
-                    magasssag: 175 + 'cm',
-                    sulya: 99 + 'kg',
-                    id: 1,
-                },
-                {
-                    neve:'Guszi',
-                    kor: 25,
-                    magasssag: 175 + 'cm',
-                    sulya: 99 + 'kg',
-                    id: 1,
-                }
-            ]
+          neve: "Bence",
+          kor: 25,
+          magasssag: 175 + "cm",
+          sulya: 99 + "kg",
+          id: 1,
         },
         {
-            nev:'peti',
-            paciensek: [
-                {
-                    neve:'Mari',
-                    kor: 25,
-                    magasssag: 175 + 'cm',
-                    sulya: 99 + 'kg',
-                    id: 1,
-                },
-                {
-                    neve:'Cicok',
-                    kor: 25,
-                    magasssag: 175 + 'cm',
-                    sulya: 99 + 'kg',
-                    id: 1,
-                }
-            ]
-        }
-    ]
+          neve: "Guszi",
+          kor: 25,
+          magasssag: 175 + "cm",
+          sulya: 99 + "kg",
+          id: 1,
+        },
+      ],
+    },
+    {
+      nev: "peti",
+      paciensek: [
+        {
+          neve: "Mari",
+          kor: 25,
+          magasssag: 175 + "cm",
+          sulya: 99 + "kg",
+          id: 1,
+        },
+        {
+          neve: "Cicok",
+          kor: 25,
+          magasssag: 175 + "cm",
+          sulya: 99 + "kg",
+          id: 1,
+        },
+      ],
+    },
+  ],
 };
 
 console.log(korhazRossz);
 
 // Ebbol minel kompaktabb korházat
 // consol logloni mind a 4 paciens nevet es korat, ugy hogy a korhazbol indulunk
-<<<<<<< HEAD
-=======
-// Ebbol minnel kompaktabb korhazat csinalni
-// Console.loggolni mind a negy paciens nevet es korat, ugy hogy a korhazbol indulunk ki
-<<<<<<< HEAD
-console.log(korhazRossz);
-=======
->>>>>>> 1480884da7fbce0202087f851daa2f2e5c468648
->>>>>>> 8be51973d1f666a6c112fd4c8bcbdea8f1c6e0a4
-=======
->>>>>>> 0dd953530f10f123d33b6cb7586f2322b835bfd0
