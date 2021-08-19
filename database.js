@@ -33,7 +33,7 @@ const paciens4 = {
     magassag: 180 + magassag,
     suly: 102 + suly,
     id: 4,
-    insurance: false,
+    insurance: true,
 };
 
 const doktor1 = {
