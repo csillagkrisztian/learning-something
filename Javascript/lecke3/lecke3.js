@@ -36,3 +36,12 @@ if (a < 18 || b < 18) {
 } else {
   console.log("Idemo!");
 }
+
+// szoras - ...lista
+
+const lista1 = [1, 2, 3];
+const lista2 = [4, 5, 6];
+
+const szamok = [...lista1, ...lista2];
+
+console.log(szamok);
