@@ -28,12 +28,21 @@ const paciens3 = {
 };
 
 const paciens4 = {
+<<<<<<< HEAD
   nev: "Viktor",
   kor: 30,
   magassag: 180 + magassag,
   suly: 102 + suly,
   id: 4,
   insurance: true,
+=======
+    nev: "Viktor",
+    kor: 30,
+    magassag: 180 + magassag,
+    suly: 102 + suly,
+    id: 4,
+    insurance: true,
+>>>>>>> 732c68f416879984fd3fcb0a7833ca6b6bd4572b
 };
 
 const doktor1 = {

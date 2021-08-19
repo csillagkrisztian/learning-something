@@ -1,3 +1,5 @@
+const korhaz = require("../../database");
+
 /* 
 
 > - nagyobb 
@@ -37,6 +39,7 @@ if (a < 18 || b < 18) {
   console.log("Idemo!");
 }
 
+<<<<<<< HEAD
 // szoras - ...lista
 
 const lista1 = [1, 2, 3];
@@ -45,3 +48,19 @@ const lista2 = [4, 5, 6];
 const szamok = [...lista1, ...lista2];
 
 console.log(szamok);
+=======
+
+const lista = [1,2,3,4];
+const paciensek = [...korhaz.doktorok[0].paciensek, ...korhaz.doktorok[1].paciensek];
+
+
+
+const pillanatnyi = paciensek[3];
+
+if (pillanatnyi.insurance === true || pillanatnyi.kor > 40) {
+  console.log('megbasszuk');
+} else { 
+  console.log('nem basszuk meg')
+};
+
+>>>>>>> 732c68f416879984fd3fcb0a7833ca6b6bd4572b
