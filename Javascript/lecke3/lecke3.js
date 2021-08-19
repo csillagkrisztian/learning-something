@@ -1,5 +1,3 @@
-const korhaz = require("../../database");
-
 /* 
 
 > - nagyobb 
@@ -39,28 +37,56 @@ if (a < 18 || b < 18) {
   console.log("Idemo!");
 }
 
-<<<<<<< HEAD
 // szoras - ...lista
 
-const lista1 = [1, 2, 3];
-const lista2 = [4, 5, 6];
+const lista1 = ["krumpi", "cica"];
+const lista2 = [{ loci: "cucu" }, 5, [], 7];
 
-const szamok = [...lista1, ...lista2];
+const nagyLista = [...lista1, ...lista2];
 
-console.log(szamok);
-=======
+console.log(nagyLista);
 
-const lista = [1,2,3,4];
-const paciensek = [...korhaz.doktorok[0].paciensek, ...korhaz.doktorok[1].paciensek];
+// for ciklus
+// 1 for - definicio
+// 2 let i = 0 - varians
+// 3 i < szamok.length - feltetel ami eldonti hogy menjen e megyegszer
+// 4 i++ - mi tortenjen ha lefut a program
+// 5 - program
+// Ha orokke fut CTRL+C
 
+//1       2         3               4
+for (let i = 0; i < nagyLista.length; i++) {
+  // 5
+  console.log(i + 1, ". szam ", nagyLista[i]);
+  console.log("-----------------");
+}
 
+// while ciklus
 
-const pillanatnyi = paciensek[3];
+let x = 0;
+while (x < 10) {
+  console.log("Wuhuuu!", x);
+  x++;
+}
 
-if (pillanatnyi.insurance === true || pillanatnyi.kor > 40) {
-  console.log('megbasszuk');
-} else { 
-  console.log('nem basszuk meg')
-};
-
->>>>>>> 732c68f416879984fd3fcb0a7833ca6b6bd4572b
+// switch
+let switchCondicio = "segg";
+// 1             2
+switch (switchCondicio) {
+  // 3    4
+  case "segg": {
+    console.log("Huhuuu seggbe");
+    break;
+  }
+  case "vagina": {
+    console.log("Buuu unalmas");
+    break;
+  }
+  default: {
+    console.log("basszunk");
+    break;
+  }
+}
+// break
+// '|'
+// 'V'
