@@ -1,6 +1,6 @@
 const korhaz = require("../../database");
 
-// kondiciok, funkciok, ciklus
+// kondiciok
 const a = 5;
 const b = 3;
 let nagyAzA;
@@ -8,6 +8,8 @@ let nagyAzA;
 if (a > b) {
   nagyAzA = true;
   // 4      5
+} else if (a === b) {
+  nagyAzA = "egyforma";
 } else {
   /*opcionalis*/
   nagyAzA = false;

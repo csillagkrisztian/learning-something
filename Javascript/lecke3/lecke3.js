@@ -36,3 +36,57 @@ if (a < 18 || b < 18) {
 } else {
   console.log("Idemo!");
 }
+
+// szoras - ...lista
+
+const lista1 = ["krumpi", "cica"];
+const lista2 = [{ loci: "cucu" }, 5, [], 7];
+
+const nagyLista = [...lista1, ...lista2];
+
+console.log(nagyLista);
+
+// for ciklus
+// 1 for - definicio
+// 2 let i = 0 - varians
+// 3 i < szamok.length - feltetel ami eldonti hogy menjen e megyegszer
+// 4 i++ - mi tortenjen ha lefut a program
+// 5 - program
+// Ha orokke fut CTRL+C
+
+//1       2         3               4
+for (let i = 0; i < nagyLista.length; i++) {
+  // 5
+  console.log(i + 1, ". szam ", nagyLista[i]);
+  console.log("-----------------");
+}
+
+// while ciklus
+
+let x = 0;
+while (x < 10) {
+  console.log("Wuhuuu!", x);
+  x++;
+}
+
+// switch
+let switchCondicio = "segg";
+// 1             2
+switch (switchCondicio) {
+  // 3    4
+  case "segg": {
+    console.log("Huhuuu seggbe");
+    break;
+  }
+  case "vagina": {
+    console.log("Buuu unalmas");
+    break;
+  }
+  default: {
+    console.log("basszunk");
+    break;
+  }
+}
+// break
+// '|'
+// 'V'
