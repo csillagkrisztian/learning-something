@@ -37,7 +37,7 @@ const paciens4 = {
   suly: 102 + suly,
   id: 4,
   insurance: true,
-  //Brufen, Glucophage
+  // Glucophage
 };
 
 const paciens5 = {

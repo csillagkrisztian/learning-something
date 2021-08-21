@@ -14,7 +14,7 @@ const p3Age = [korhazunk.doktorok[1].paciensek[0].kor];
 const p4Name = [korhazunk.doktorok[1].paciensek[1].nev];
 const p4Age = [korhazunk.doktorok[1].paciensek[1].kor];
 
-// Define text strings for the senctences
+// Define text strings for the senctences 5*
 const a = "A ";
 const nameOf = " nevű doktor ";
 const nameOfP = " nevű páciense ";
