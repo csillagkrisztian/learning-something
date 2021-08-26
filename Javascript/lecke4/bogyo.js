@@ -10,11 +10,11 @@ console.log(result);
 */
 
 let myList = ["pizza", "dzsuvety", "tortilla"];
-
+const text = "A kaják amiket szeretek:";
 function finom(kaja) {
-    const text = "A kaják amiket szeretek:"
-    for (let i = 0; i < kaja.length; i++)
-  
+  for (let i = 0; i < kaja.length; i++) {
+    conosle.log(text) + console.log(myList[i]);
+  }
 }
-return "A kaják amiket szeretek:" + ;
-console.log(finom(myList));
+finom(myList);
+//console.log(text + finom(myList) + ", ");
