@@ -1,39 +1,46 @@
+// Database import
 const korhazunk = require("../../database");
+
+// Patients def.
 
 const pac = [
   ...korhazunk.doktorok[0].paciensek,
   ...korhazunk.doktorok[1].paciensek,
 ];
 
-const brufen = "Brufen";
-const trodon = "Trodon";
-const gyogyszerObjektum = {};
-for (i = 0; i < pac.length; i++) {
-  let nev = pac[i].nev;
-  let kor = pac[i].kor;
-  let kg = pac[i].suly;
-  let bizt = pac[i].insurance;
-  let mag = pac[i].magassag;
-  let kg1 = parseInt(kg);
-  let mag1 = parseInt(mag);
+// Meds def.
 
-  /*let state1 = 8
-  let state2 = mag1 > 175 && kg1 > 100 && bizt === true;
-  let state3 = mag1 > 175 && kor > 60 && bizt === true;
-  let state4 = kg1 > 100 && kor > 60 && bizt === true;
-  let state5 = kg1 < 70 && kor < 30;
-  let state6 = kor > 60 && bizt === true;
-  let state7 = kg1 > 100 && bizt === true;
-  let state8 = mag1> 175; */
+const brufen = "Brufen";
+const bensedin = "Bensedin";
+const glucophage = "Glucophage";
+const diclophen = "Diclophen";
+const medObject = {};
+
+// Program main part
+
+for (i = 0; i < pac.length; i++) {
+  let name = pac[i].nev;
+  let age = pac[i].kor;
+  let importWeight = pac[i].suly;
+  let ins = pac[i].insurance;
+  let importHeight = pac[i].magassag;
+  let weight = parseInt(importWeight);
+  let height = parseInt(importHeight);
   const medList = [];
 
-  if (mag1 > 175) {
+  if (height > 175) {
     medList.push(brufen);
   }
-  if (kg1 > 100) {
-    medList.push(trodon);
+  if (weight < 100 && age <= 30) {
+    medList.push(bensedin);
   }
-  gyogyszerObjektum[nev] = medList;
+  if (weight > 100 && ins === true) {
+    medList.push(glucophage);
+  }
+  if (age > 60 && ins === true) {
+    medList.push(diclophen);
+  }
+  medObject[name] = medList;
 }
 
-console.log(gyogyszerObjektum);
+console.log(medObject);

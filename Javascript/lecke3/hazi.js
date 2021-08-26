@@ -35,8 +35,8 @@ Lépésekben kb ezt kéne:
 
         gyogyszerObjektum["Mari"] = ["Bensedin","Glucophage"];
 
-        console.log(gyogyszerObjektum);
-        // amit kimutat
+        c
+        // amit kimuonsole.log(gyogyszerObjektum);tat
         {
             Mari:["Bensedin","Glucophage"]
         }
