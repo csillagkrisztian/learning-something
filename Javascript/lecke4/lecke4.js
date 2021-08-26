@@ -27,3 +27,15 @@ const b = 3;
 function osszeadas(first, second) {
   return first + second;
 }
+
+const list = ["burrito", "csirke", "pizza"];
+
+function kedvencKaja(kajaLista) {
+  let mondat = "A kedvenc kajaim a: ";
+  for (let i = 0; i < kajaLista.length; i++) {
+    mondat = mondat + kajaLista[i] + ", ";
+  }
+  return mondat;
+}
+
+//console.log("eredmeny", kedvencKaja(list));
