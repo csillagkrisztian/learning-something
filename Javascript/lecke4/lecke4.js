@@ -38,4 +38,4 @@ function kedvencKaja(kajaLista) {
   return mondat;
 }
 
-//console.log("eredmeny", kedvencKaja(list));
+console.log("eredmeny", kedvencKaja(list));
