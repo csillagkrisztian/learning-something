@@ -2,11 +2,11 @@
 const korhazunk = require("../../database");
 
 // Patients def.
+const patients = [];
 
-const pac = [
-  ...korhazunk.doktorok[0].paciensek,
-  ...korhazunk.doktorok[1].paciensek,
-];
+for (let i = 0; i < korhazunk.doktorok.length; i++) {
+  patients.push(...korhazunk.doktorok[i].paciensek);
+}
 
 // Meds def.
 
@@ -18,12 +18,12 @@ const medObject = {};
 
 // Program main part
 
-for (i = 0; i < pac.length; i++) {
-  let name = pac[i].nev;
-  let age = pac[i].kor;
-  let importWeight = pac[i].suly;
-  let ins = pac[i].insurance;
-  let importHeight = pac[i].magassag;
+for (let i = 0; i < patients.length; i++) {
+  let name = patients[i].nev;
+  let age = patients[i].kor;
+  let importWeight = patients[i].suly;
+  let ins = patients[i].insurance;
+  let importHeight = patients[i].magassag;
   let weight = parseInt(importWeight);
   let height = parseInt(importHeight);
   let medList = [];
@@ -40,10 +40,10 @@ for (i = 0; i < pac.length; i++) {
   if (age > 60 && ins === true) {
     medList.push(diclophen);
   }
-  medObject[name] = medList;
   if (medList.length === 0) {
-    medList.push(null);
+    medList = null;
   }
+  medObject[name] = medList;
 }
 
 console.log(medObject);
