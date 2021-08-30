@@ -1,49 +1,52 @@
 // Database import
-const korhazunk = require("../../database");
+const korhazCsantaver = require("./database2");
+const korhazBajmok = require("../../database");
 
-// Patients def.
+function medSort(localHospital) {
+  // Patients def.
+  const patients = [];
 
-const pac = [
-  ...korhazunk.doktorok[0].paciensek,
-  ...korhazunk.doktorok[1].paciensek,
-];
-
-// Meds def.
-
-const brufen = "Brufen";
-const bensedin = "Bensedin";
-const glucophage = "Glucophage";
-const diclophen = "Diclophen";
-const medObject = {};
-
-// Program main part
-
-for (i = 0; i < pac.length; i++) {
-  let name = pac[i].nev;
-  let age = pac[i].kor;
-  let importWeight = pac[i].suly;
-  let ins = pac[i].insurance;
-  let importHeight = pac[i].magassag;
-  let weight = parseInt(importWeight);
-  let height = parseInt(importHeight);
-  let medList = [];
-
-  if (height > 175) {
-    medList.push(brufen);
+  for (let i = 0; i < localHospital.doktorok.length; i++) {
+    patients.push(...localHospital.doktorok[i].paciensek);
   }
-  if (weight < 100 && age <= 30) {
-    medList.push(bensedin);
+
+  // Meds def.
+
+  const brufen = "Brufen";
+  const bensedin = "Bensedin";
+  const glucophage = "Glucophage";
+  const diclophen = "Diclophen";
+  const medObject = {};
+
+  // Program main part
+
+  for (let i = 0; i < patients.length; i++) {
+    let name = patients[i].nev;
+    let age = patients[i].kor;
+    let importWeight = patients[i].suly;
+    let ins = patients[i].insurance;
+    let importHeight = patients[i].magassag;
+    let weight = parseInt(importWeight);
+    let height = parseInt(importHeight);
+    let medList = [];
+
+    if (height > 175) {
+      medList.push(brufen);
+    }
+    if (weight < 70 && age <= 30) {
+      medList.push(bensedin);
+    }
+    if (weight > 100 && ins === true) {
+      medList.push(glucophage);
+    }
+    if (age > 60 && ins === true) {
+      medList.push(diclophen);
+    }
+    if (medList.length === 0) {
+      medList = null;
+    }
+    medObject[name] = medList;
   }
-  if (weight > 100 && ins === true) {
-    medList.push(glucophage);
-  }
-  if (age > 60 && ins === true) {
-    medList.push(diclophen);
-  }
-  medObject[name] = medList;
-  if (medList.length === 0) {
-    medList.push(null);
-  }
+  return medObject;
 }
-
-console.log(medObject);
+console.log(medSort(korhazBajmok));
