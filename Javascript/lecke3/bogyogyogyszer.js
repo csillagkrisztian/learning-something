@@ -26,7 +26,7 @@ for (i = 0; i < pac.length; i++) {
   let importHeight = pac[i].magassag;
   let weight = parseInt(importWeight);
   let height = parseInt(importHeight);
-  const medList = [];
+  let medList = [];
 
   if (height > 175) {
     medList.push(brufen);
@@ -41,6 +41,9 @@ for (i = 0; i < pac.length; i++) {
     medList.push(diclophen);
   }
   medObject[name] = medList;
+  if (medList.length === 0) {
+    medList.push(null);
+  }
 }
 
 console.log(medObject);
