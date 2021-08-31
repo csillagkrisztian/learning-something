@@ -11,3 +11,9 @@ describe("ifdrunk", () => {
     expect(importalunk.ifDrunk(0.8)).toEqual("ITTAS");
   });
 });
+
+describe("action", () => {
+  it("Reszeg", () => {
+    expect(importalunk.action(importalunk.RESZEG)).toEqual("tente");
+  });
+});

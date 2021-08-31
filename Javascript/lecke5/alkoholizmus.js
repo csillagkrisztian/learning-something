@@ -8,19 +8,55 @@ function drunk(alkoholszint) {
   }
 }
 
+const ITTAS = "ITTAS";
+const RESZEG = "RESZEG";
+const ALKOHOLMERGEZES = "ALKOHOLMÉRGEZÉS";
+
 function ifDrunk(alkoholszint) {
   if (alkoholszint > 0.5 && alkoholszint <= 1.5) {
-    return "ITTAS";
+    return ITTAS;
   }
   if (alkoholszint > 1.5 && alkoholszint < 2.5) {
-    return "RÉSZEG";
+    return RESZEG;
   }
   if (alkoholszint > 2.5) {
-    return "ALKOHOLMÉRGEZÉS";
+    return ALKOHOLMERGEZES;
   }
 }
+
+function action(text) {
+  switch (text) {
+    case ITTAS: {
+      console.log("Ön " + ITTAS);
+      console.log("Ne vezessen járművet");
+      break;
+    }
+    case RESZEG: {
+      console.log("A kedves úriember " + RESZEG);
+      console.log("Takarodjon aludni");
+      return "tente";
+    }
+    case ALKOHOLMERGEZES: {
+      console.log("Gyomormosásra kell küldeni a kedveskét " + ALKOHOLMERGEZES);
+      console.log("Vagy halott");
+      break;
+    }
+  }
+}
+
+function mainFunction(alkoholszint) {
+  const drunk = drunk(alkoholszint);
+  if (drunk === true) {
+    const howDrunk = ifDrunk(alkoholszint);
+    action(howDrunk);
+  }
+}
+
+mainFunction(2);
 
 module.exports = {
   drunk,
   ifDrunk,
+  action,
+  RESZEG,
 };
