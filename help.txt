@@ -14,3 +14,12 @@ git pull - frissiti a feltoltott informaciokat (enis megcsinaltam,Bogyo)
 ./ - ugyan az a folder
 ../ - egyel vissza
 module.exports = 'adat'; - igy exportalsz
+
+### Tesztek 
+npm install jest - telepites
+uj file package.json - {
+  "scripts": {
+    "test": "jest"
+  }
+}
+npm run test

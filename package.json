@@ -2,4 +2,8 @@
   "scripts": {
     "test": "jest"
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 1dfe2a644e1a84e7fbf9439f36b485353b78d32e
