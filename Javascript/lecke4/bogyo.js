@@ -9,12 +9,23 @@ console.log(result);
 //console.log(ajde(a, b));
 */
 
-let myList = ["pizza", "dzsuvety", "tortilla"];
-const text = "A kaják amiket szeretek:";
+let myList = [
+  "pizza",
+  "dzsuvety",
+  "tortilla",
+  "kecskehus",
+  "csilisbab",
+  "manavita",
+];
 function finom(kaja) {
+  let text = "A kaják amiket szeretek:";
   for (let i = 0; i < kaja.length; i++) {
-    conosle.log(text) + console.log(myList[i]);
+    if (i === kaja.length - 1) {
+      text = text + kaja[i] + ".";
+    } else {
+      text = text + kaja[i] + ", ";
+    }
   }
+  return text;
 }
-finom(myList);
-//console.log(text + finom(myList) + ", ");
+console.log(finom(myList));

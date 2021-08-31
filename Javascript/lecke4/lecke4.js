@@ -39,3 +39,5 @@ function kedvencKaja(kajaLista) {
 }
 
 //console.log("eredmeny", kedvencKaja(list));
+
+const lista = ["Mari", "Juli", "Tibi"];
