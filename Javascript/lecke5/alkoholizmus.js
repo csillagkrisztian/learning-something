@@ -8,8 +8,19 @@ function drunk(alkoholszint) {
   }
 }
 
-console.log("teszt alkoholszint " + drunk(0.1));
+function ifDrunk(alkoholszint) {
+  if (alkoholszint > 0.5 && alkoholszint <= 1.5) {
+    return "ITTAS";
+  }
+  if (alkoholszint > 1.5 && alkoholszint < 2.5) {
+    return "RÉSZEG";
+  }
+  if (alkoholszint > 2.5) {
+    return "ALKOHOLMÉRGEZÉS";
+  }
+}
 
 module.exports = {
   drunk,
+  ifDrunk,
 };
