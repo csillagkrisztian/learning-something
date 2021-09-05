@@ -1,7 +1,11 @@
+const { describe } = require("yargs");
 const importalunk = require("./alkoholizmus");
 
-describe("tesztelunk valamit ", () => {
-  it("alkoholszintteszt ", () => {
-    expect(importalunk.drunk(2)).toEqual(false);
-  });
-});
+// a TESZTELES ELSO SZABALYA -> A felhasznalo mindig: vak, reszeg, hulye
+
+describe("Alkoholizmus", () => {
+  describe("main",() => {})
+  describe("drunk",()=> {})
+  describe("ifDrunk",()=> {})
+  describe("action",()=> {})
+})
