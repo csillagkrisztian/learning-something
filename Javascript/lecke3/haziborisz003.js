@@ -1,18 +1,58 @@
 const korhaz = require("../../database");
 
-const teszt1 = [korhaz.paciens1];
+const pList = [];
+for (let i = 0; i < korhaz.doktorok.length; i++) {
+  pList.push(...korhaz.doktorok[i].paciensek);
+}
 
-console.log("teszt elso paciens " + teszt1);
+for (let i = 0; i < pList.length; i++) {
+  let paciensStuff = [
+    //// MAYBE USELESS ???
+    pList[i].nev,
+    pList[i].suly,
+    pList[i].kor,
+    pList[i].magassag,
+    pList[i].insurance,
+  ];
 
-const dokiTeszt = [korhaz.doktorok];
+  let patientList = [];
 
-console.log("idemotesztdoki" + dokiTeszt);
+  let pacientHeight = parseFloat(pList[i].magassag);
+  let pacientAge = parseFloat(pList[i].kor);
+  let pacientWeight = parseFloat(pList[i].suly);
 
-const teszt3 = [korhaz.doktorok[0].paciensek.length];
+  if (pacientWeight > 100 && pList[i].insurance) {
+    console.log(pList[i].nev + " *Glucophage");
+    patientList.push(pList[i].nev + " Glucophage"); //why does it push more?
+  }
+  if (pacientWeight < 70 && pacientAge < 30) {
+    console.log(pList[i].nev + " *Bensedin");
+  }
 
-const teszt4 = [korhaz.doktorok[1].paciensek[3].nev];
+  if (pacientHeight > 175) {
+    console.log(pList[i].nev + " *Brufen");
+  }
 
-console.log("teszt4 " + teszt4);
+  if (pacientAge > 60 && pList[i].insurance) {
+    console.log(pList[i].nev + " *Diclophen");
+  }
+
+  console.log("PLIST>> " + patientList);
+
+  /*    DOES NOT WORK: (never ends lol )
+  
+  while (paciensHeight > 175) {
+    console.log(pList[i].nev + " Brufen");
+    paciensHeight++;
+  } */
+
+  //console.log(paciensSuly + "<< teszt");
+  //console.log(typeof pList[i].suly);
+  // console.log(typeof paciensStuff + "<<<IDKWTF");
+  //console.log(typeof pList + "<teszt MIAFASZOMVANBENNEBAZDMEGKURWY");
+  //console.log(pList[i].suly + " <sulyteszt");
+  //console.log(paciensStuff + " <pacientstuff");
+}
 
 // A betegeknek kialakitunk egy automatikus gyógyszerosztó algoritmust
 /* Feltételek: 
