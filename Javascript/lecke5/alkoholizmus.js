@@ -1,4 +1,15 @@
 /* Kiszamolja hogy reszeg e vagy nem*/
+const ITTAS = "ITTAS";
+const RESZEG = "RESZEG";
+const ALKOHOLMERGEZES = "ALKOHOLMÉRGEZÉS";
+
+const drunk = (alkoholszint) => {
+  if (alkoholszint >= 0.2) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 function drunk(alkoholszint) {
   if (alkoholszint >= 0.2) {
@@ -7,10 +18,6 @@ function drunk(alkoholszint) {
     return false;
   }
 }
-
-const ITTAS = "ITTAS";
-const RESZEG = "RESZEG";
-const ALKOHOLMERGEZES = "ALKOHOLMÉRGEZÉS";
 
 function ifDrunk(alkoholszint) {
   if (alkoholszint > 0.5 && alkoholszint <= 1.5) {
@@ -32,9 +39,7 @@ function action(text) {
       break;
     }
     case RESZEG: {
-      console.log("A kedves úriember " + RESZEG);
-      console.log("Takarodjon aludni");
-      return "tente";
+      return "Takarodjon aludni";
     }
     case ALKOHOLMERGEZES: {
       console.log("Gyomormosásra kell küldeni a kedveskét " + ALKOHOLMERGEZES);
@@ -45,14 +50,12 @@ function action(text) {
 }
 
 function mainFunction(alkoholszint) {
-  const drunk = drunk(alkoholszint);
-  if (drunk === true) {
+  const isDrunk = drunk(alkoholszint);
+  if (isDrunk === true) {
     const howDrunk = ifDrunk(alkoholszint);
     action(howDrunk);
   }
 }
-
-mainFunction(2);
 
 module.exports = {
   drunk,

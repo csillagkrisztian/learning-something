@@ -1,19 +1,11 @@
+const { describe } = require("yargs");
 const importalunk = require("./alkoholizmus");
 
-describe("drunk", () => {
-  it("alkoholszintteszt ", () => {
-    expect(importalunk.drunk(2)).toEqual(true);
-  });
-});
+// a TESZTELES ELSO SZABALYA -> A felhasznalo mindig: vak, reszeg, hulye
 
-describe("ifdrunk", () => {
-  it("ittas", () => {
-    expect(importalunk.ifDrunk(0.8)).toEqual("ITTAS");
-  });
-});
-
-describe("action", () => {
-  it("Reszeg", () => {
-    expect(importalunk.action(importalunk.RESZEG)).toEqual("tente");
-  });
-});
+describe("Alkoholizmus", () => {
+  describe("main",() => {})
+  describe("drunk",()=> {})
+  describe("ifDrunk",()=> {})
+  describe("action",()=> {})
+})
