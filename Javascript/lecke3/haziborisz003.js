@@ -5,6 +5,8 @@ for (let i = 0; i < korhaz.doktorok.length; i++) {
   pList.push(...korhaz.doktorok[i].paciensek);
 }
 
+const medication = {};
+
 const GLUCO = "Glucophage";
 const BRUFEN = "Brufen";
 const BENS = "Bensedin";
@@ -34,9 +36,11 @@ for (let i = 0; i < pList.length; i++) {
     medList.push(BRUFEN);
   }
 
-  if (pacientAge > 60 && pList[i].insurance) {
+  if (pacientAge > 60 && insurance) {
     medList.push(DICLO);
   }
 
-  console.log(medList);
+  medication[nev] = medList.length > 0 ? medList : null;
 }
+
+console.log("idk teszt lol", medication);
