@@ -22,7 +22,7 @@ for (i = 0; i < pac.length; i++) {
   let kg1 = parseInt(kg);
   let mag1 = parseInt(mag);
 
-  const gyogyszer = [];
+  let gyogyszer = [];
 
   if (mag1 > 175) {
     gyogyszer.push(BRU);
@@ -37,7 +37,7 @@ for (i = 0; i < pac.length; i++) {
     gyogyszer.push(DIC);
   }
   if (gyogyszer.length === 0) {
-    gyogyszer.push("null");
+    gyogyszer = null;
   }
   gyogyszerObjektum[nev] = gyogyszer;
 }
