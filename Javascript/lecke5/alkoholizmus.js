@@ -3,13 +3,13 @@ const ITTAS = "ITTAS";
 const RESZEG = "RESZEG";
 const ALKOHOLMERGEZES = "ALKOHOLMÉRGEZÉS";
 
-const drunk = (alkoholszint) => {
+const drunki = (alkoholszint) => {
   if (alkoholszint >= 0.2) {
     return true;
   } else {
     return false;
   }
-}
+};
 
 function drunk(alkoholszint) {
   if (alkoholszint >= 0.2) {
@@ -56,6 +56,8 @@ function mainFunction(alkoholszint) {
     action(howDrunk);
   }
 }
+
+mainFunction(0.2);
 
 module.exports = {
   drunk,
