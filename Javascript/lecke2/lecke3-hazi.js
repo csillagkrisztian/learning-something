@@ -1,5 +1,5 @@
 // importálás
-const database = require("../lecke3/database2");
+const database = require("../../database");
 
 // szótár, csak hogy ne kelljen sokat írni ugyan azt
 const BRUFEN = "Brufen";
